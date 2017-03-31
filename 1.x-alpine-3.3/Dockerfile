@@ -10,10 +10,12 @@ RUN apk add --update bash                   \
                      openssl                \
                      python              && \
     apk add --virtual ansible-build-deps    \
+            gmp-dev                         \
             libffi-dev                      \
             openssl-dev                     \
             py-pip                          \
-            python-dev                   && \
+            python-dev                      \
+            yaml-dev                     && \
     pip install --user "ansible < 2.0"   && \
     apk del ansible-build-deps           && \
     rm -rf /root/.cache                     \
