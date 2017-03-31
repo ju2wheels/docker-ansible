@@ -6,7 +6,7 @@ ENV PATH "${PATH}:/root/.local/bin"
 RUN apk add --update bash                   \
                      build-base             \
                      curl                   \
-                     openssh-cleint         \
+                     openssh-client         \
                      openssl                \
                      python              && \
     apk add --virtual ansible-build-deps    \
