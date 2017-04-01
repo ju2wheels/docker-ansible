@@ -9,13 +9,12 @@ RUN yum upgrade -y                                                              
     yum install -y curl                                                                        \
                    openssl                                                                  && \
     yum install -y gmp-devel                                                                   \
-                   libffi-devel                                                                \
                    libyaml-devel                                                               \
                    openssl-devel                                                               \
                    python-devel                                                                \
                    python2-pip                                                              && \
+    yum install -y --setopt=tsflags='' libffi-devel                                         && \
     pip install --user "ansible < 2.0"                                                      && \
-    touch /usr/share/info/libffi.info.gz                                                    && \
     yum remove -y  gmp-devel                                                                   \
                    keyutils-libs-devel                                                         \
                    krb5-devel                                                                  \
