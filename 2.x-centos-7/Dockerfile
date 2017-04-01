@@ -3,9 +3,11 @@ MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
 ENV PATH "${PATH}:/root/.local/bin"
 
-RUN yum install -y "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" && \
+RUN yum upgrade -y                                                                          && \
+    yum install -y "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" && \
     yum groupinstall -y "Development Tools"                                                 && \
-    yum install -y openssl                                                                  && \
+    yum install -y curl                                                                        \
+                   openssl                                                                  && \
     yum install -y gmp-devel                                                                   \
                    libffi-devel                                                                \
                    libyaml-devel                                                               \

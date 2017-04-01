@@ -3,12 +3,13 @@ MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
 ENV PATH "${PATH}:/root/.local/bin"
 
-RUN apk add --update bash                   \
-                     build-base             \
-                     curl                   \
-                     openssh-client         \
-                     openssl                \
-                     python              && \
+RUN apk upgrade --latest --update-cache  && \
+    apk add bash                            \
+            build-base                      \
+            curl                            \
+            openssh-client                  \
+            openssl                         \
+            python                       && \
     apk add --virtual ansible-build-deps    \
             gmp-dev                         \
             libffi-dev                      \

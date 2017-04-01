@@ -3,12 +3,14 @@ MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
 ENV PATH "${PATH}:/root/.local/bin"
 
-RUN yum install -y wget                                                                       && \
+RUN yum upgrade -y                                                                            && \
+    yum install -y wget                                                                       && \
     rpm -i "http://dl.fedoraproject.org/pub/epel/epel-release-latest-5.noarch.rpm"            && \
     wget -O /var/cache/yum/ius-release.rpm "https://centos5.iuscommunity.org/ius-release.rpm" && \
     rpm -i /var/cache/yum/ius-release.rpm                                                     && \
     yum groupinstall -y "Development Tools"                                                   && \
-    yum install -y gcc44                                                                         \
+    yum install -y curl                                                                          \
+                   gcc44                                                                         \
                    gcc44-c++                                                                     \
                    openssl                                                                       \
                    openssl101e                                                                   \
