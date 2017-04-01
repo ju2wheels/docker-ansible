@@ -6,7 +6,9 @@ ENV PATH "${PATH}:/root/.local/bin"
 RUN yum upgrade -y                                                                          && \
     yum install -y "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" && \
     yum groupinstall -y "Development Tools"                                                 && \
-    yum install -y curl                                                                        \
+    yum install -y crontabs                                                                    \
+                   curl                                                                        \
+                   git                                                                         \
                    openssl                                                                  && \
     yum install -y gmp-devel                                                                   \
                    libyaml-devel                                                               \
@@ -14,7 +16,9 @@ RUN yum upgrade -y                                                              
                    python-devel                                                                \
                    python2-pip                                                              && \
     yum install -y --setopt=tsflags='' libffi-devel                                         && \
-    pip install --user "ansible < 3.0"                                                      && \
+    pip install --upgrade --user pip                                                        && \
+    pip install --user "ansible < 3.0"                                                         \
+                       "pexpect >= 3.3"                                                     && \
     yum remove -y  gmp-devel                                                                   \
                    keyutils-libs-devel                                                         \
                    krb5-devel                                                                  \

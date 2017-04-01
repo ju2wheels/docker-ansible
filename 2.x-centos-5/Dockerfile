@@ -9,9 +9,11 @@ RUN yum upgrade -y                                                              
     wget -O /var/cache/yum/ius-release.rpm "https://centos5.iuscommunity.org/ius-release.rpm" && \
     rpm -i /var/cache/yum/ius-release.rpm                                                     && \
     yum groupinstall -y "Development Tools"                                                   && \
-    yum install -y curl                                                                          \
+    yum install -y crontabs                                                                      \
+                   curl                                                                          \
                    gcc44                                                                         \
                    gcc44-c++                                                                     \
+                   git                                                                           \
                    openssl                                                                       \
                    openssl101e                                                                   \
                    python27                                                                   && \
@@ -25,7 +27,9 @@ RUN yum upgrade -y                                                              
     cd /usr/include                                                                           && \
     mv openssl openssl-orig                                                                   && \
     ln -s openssl101e/openssl openssl                                                         && \
-    pip2.7 install --user "ansible < 3.0"                                                     && \
+    pip2.7 install --upgrade --user pip                                                       && \
+    pip2.7 install --user "ansible < 3.0"                                                        \
+                          "pexpect >= 3.3"                                                    && \
     rm -f openssl                                                                             && \
     mv openssl-orig openssl                                                                   && \
     yum remove -y  e2fsprogs-devel                                                               \

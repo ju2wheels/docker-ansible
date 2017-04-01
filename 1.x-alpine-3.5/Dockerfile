@@ -7,6 +7,7 @@ RUN apk upgrade --latest --update-cache  && \
     apk add bash                            \
             build-base                      \
             curl                            \
+            git                             \
             openssh-client                  \
             openssl                         \
             python                       && \
@@ -17,7 +18,9 @@ RUN apk upgrade --latest --update-cache  && \
             py-pip                          \
             python-dev                      \
             yaml-dev                     && \
-    pip install --user "ansible < 2.0"   && \
+    pip install --upgrade --user pip     && \
+    pip install --user "ansible < 2.0"      \
+                       "pexpect >= 3.3"  && \
     apk del ansible-build-deps           && \
     rm -rf /root/.cache                     \
            /var/cache/apk/*
