@@ -15,6 +15,7 @@ RUN yum upgrade -y                                                              
                    python-devel                                                                \
                    python-pip                                                               && \
     pip install --user "ansible < 2.0"                                                      && \
+    touch /usr/share/info/libffi.info.gz                                                    && \
     yum remove -y  gmp-devel                                                                   \
                    keyutils-libs-devel                                                         \
                    krb5-devel                                                                  \
