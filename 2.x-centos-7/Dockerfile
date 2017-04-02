@@ -1,7 +1,7 @@
 FROM       centos:7
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "${PATH}:/root/.local/bin"
+ENV PATH "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin"
 
 RUN yum upgrade -y                                                                          && \
     yum install -y "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" && \
@@ -17,8 +17,8 @@ RUN yum upgrade -y                                                              
                    python2-pip                                                              && \
     yum install -y --setopt=tsflags='' libffi-devel                                         && \
     pip install --upgrade --user pip                                                        && \
-    pip install --user "ansible < 3.0"                                                         \
-                       "pexpect >= 3.3"                                                     && \
+    pip2.7 install --user "ansible < 3.0"                                                      \
+                          "pexpect >= 3.3"                                                  && \
     yum remove -y  gmp-devel                                                                   \
                    keyutils-libs-devel                                                         \
                    krb5-devel                                                                  \

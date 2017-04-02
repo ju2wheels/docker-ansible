@@ -1,7 +1,7 @@
 FROM       centos:5
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "${PATH}:/root/.local/bin"
+ENV PATH "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin"
 
 RUN yum upgrade -y                                                                            && \
     yum install -y wget                                                                       && \
