@@ -40,7 +40,6 @@ RUN yum upgrade -y                                                              
                    gmp-devel                                                         \
                    keyutils-libs-devel                                               \
                    krb5-devel                                                        \
-                   libffi                                                            \
                    libffi-devel                                                      \
                    libselinux-devel                                                  \
                    libsepol-devel                                                    \
