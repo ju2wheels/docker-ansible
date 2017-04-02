@@ -38,6 +38,7 @@ RUN yum upgrade -y                                                              
                    python2-pip                                                                 \
                    python-setuptools                                                           \
                    zlib-devel                                                               && \
+    sed -i 's/tsflags=nodocs//' /etc/yum.conf                                               && \
     rm -rf /root/.cache                                                                        \
            /var/cache/yum
 
