@@ -30,9 +30,11 @@ RUN yum upgrade -y                                                              
     cd /usr/include                                                               && \
     mv openssl openssl-orig                                                       && \
     ln -s openssl101e/openssl openssl                                             && \
-    pip2.7 install --upgrade --user pip                                           && \
-    pip2.7 install --user "ansible < 2.0"                                            \
-                          "pexpect >= 3.3"                                        && \
+    pip2.7 install --forece-reinstall                                                \
+                   --upgrade --user pip                                              \
+                                    setuptools                                    && \
+    /root/.local/bin/pip2.7 install --user "ansible < 2.0"                           \
+                                           "pexpect >= 3.3"                       && \
     rm -f openssl                                                                 && \
     mv openssl-orig openssl                                                       && \
     yum remove -y  e2fsprogs-devel                                                   \
