@@ -2,7 +2,7 @@ FROM       ubuntu:12.04
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
 ENV DEBIAN_FRONTEND "noninteractive"
-ENV PATH            "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin"
+ENV PATH            "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 RUN apt-get update                         && \
     apt-get -y dist-upgrade                && \

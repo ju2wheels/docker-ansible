@@ -1,7 +1,7 @@
 FROM       alpine:3.5
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin"
+ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 RUN apk upgrade --latest --update-cache   && \
     apk add bash                             \
