@@ -28,7 +28,8 @@ RUN apt-get update                         && \
                        python-pycparser       \
                        python-setuptools      \
                        python2.7-dev       && \
-    pip2 install --upgrade --user cffi        \
+    pip2 install --force-reinstall            \
+                 --upgrade --user cffi        \
                                   pip      && \
     pip2.7 install --user "ansible < 3.0"     \
                           "pexpect >= 3.3" && \

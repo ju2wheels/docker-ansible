@@ -17,8 +17,8 @@ RUN yum upgrade -y                                                              
                    python-pip                                                               && \
     yum install -y --setopt=tsflags='' libffi-devel                                         && \
     pip install --upgrade --user pip                                                        && \
-    pip2.7 install --user "ansible < 3.0"                                                      \
-                          "pexpect >= 3.3"                                                  && \
+    pip2 install --user "ansible < 3.0"                                                        \
+                        "pexpect >= 3.3"                                                    && \
     yum remove -y  gmp-devel                                                                   \
                    keyutils-libs-devel                                                         \
                    krb5-devel                                                                  \
