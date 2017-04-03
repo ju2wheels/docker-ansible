@@ -8,9 +8,11 @@ RUN yum upgrade -y                                                              
     yum groupinstall -y "Development Tools"                                                 && \
     yum install -y crontabs                                                                    \
                    curl                                                                        \
+                   dnf                                                                         \
                    git                                                                         \
                    gnupg2                                                                      \
-                   openssl                                                                  && \
+                   openssl                                                                     \
+                   python-dnf                                                               && \
     yum install -y gmp-devel                                                                   \
                    libyaml-devel                                                               \
                    openssl-devel                                                               \
