@@ -12,6 +12,7 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
             build-base                                                             \
             curl                                                                   \
             git                                                                    \
+            gnupg                                                                  \
             openssh-client                                                         \
             openssl                                                                \
             python                                                              && \

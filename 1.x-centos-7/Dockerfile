@@ -9,6 +9,7 @@ RUN yum upgrade -y                                                              
     yum install -y crontabs                                                                    \
                    curl                                                                        \
                    git                                                                         \
+                   gnupg2                                                                      \
                    openssl                                                                  && \
     yum install -y gmp-devel                                                                   \
                    libyaml-devel                                                               \

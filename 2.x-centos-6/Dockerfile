@@ -10,6 +10,7 @@ RUN yum upgrade -y                                                              
     yum install -y crontabs                                                                              \
                    curl                                                                                  \
                    git                                                                                   \
+                   gnupg2                                                                                \
                    openssl                                                                               \
                    python27                                                                           && \
     yum install -y curl-devel                                                                            \

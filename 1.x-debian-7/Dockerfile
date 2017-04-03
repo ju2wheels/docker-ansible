@@ -13,6 +13,7 @@ RUN apt-get update                         && \
                        cron                   \
                        curl                   \
                        git                    \
+                       gnupg2                 \
                        openssh-client         \
                        openssl                \
                        python                 \

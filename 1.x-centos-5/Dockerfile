@@ -17,6 +17,7 @@ RUN yum upgrade -y                                                              
                    gcc44                                                             \
                    gcc44-c++                                                         \
                    git                                                               \
+                   gnupg2                                                            \
                    openssl                                                           \
                    openssl101e                                                       \
                    python27                                                       && \
