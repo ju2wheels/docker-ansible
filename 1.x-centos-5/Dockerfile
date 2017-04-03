@@ -30,7 +30,7 @@ RUN yum upgrade -y                                                              
     cd /usr/include                                                               && \
     mv openssl openssl-orig                                                       && \
     ln -s openssl101e/openssl openssl                                             && \
-    pip2.7 install --forece-reinstall                                                \
+    pip2.7 install --force-reinstall                                                 \
                    --upgrade --user pip                                              \
                                     setuptools                                    && \
     /root/.local/bin/pip2.7 install --user "ansible < 2.0"                           \
