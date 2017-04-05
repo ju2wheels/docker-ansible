@@ -5,6 +5,7 @@ ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbi
 ENV PYCURL_SSL_LIBRARY "nss"
 
 RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo && \
+    yum install -y yum-plugin-ovl                                                && \
     yum upgrade -y                                                               && \
     yum groupinstall -y "Development Tools"                                      && \
     yum install -y crontabs                                                         \
