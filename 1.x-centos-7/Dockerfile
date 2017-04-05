@@ -1,7 +1,8 @@
 FROM       centos:7
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "nss"
 
 RUN yum upgrade -y                                                                          && \
     yum install -y "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" && \

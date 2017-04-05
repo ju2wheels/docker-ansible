@@ -21,8 +21,8 @@ RUN apt-get update                                   && \
                        python-minimal                   \
                        python2.7                     && \
     apt-get --no-install-recommends                     \
-            -y install llibcurl3-gnutls-dev             \
-                       ibffi-dev                        \
+            -y install libcurl3-gnutls-dev              \
+                       libffi-dev                       \
                        libgmp-dev                       \
                        libgnutls-dev                    \
                        libssl-dev                       \

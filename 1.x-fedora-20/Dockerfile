@@ -1,7 +1,8 @@
 FROM       fedora:20
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "nss"
 
 RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo && \
     yum upgrade -y                                                               && \

@@ -18,7 +18,7 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories  && \
                       curl-dev                          \
                       gmp-dev                           \
                       libffi-dev                        \
-                      openssl-dev                       \
+                      libressl-dev                      \
                       py-pip                            \
                       python-dev                        \
                       yaml-dev                       && \
