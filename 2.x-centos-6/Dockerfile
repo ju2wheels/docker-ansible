@@ -21,12 +21,14 @@ RUN yum upgrade -y                                                              
                    python27-pip                                                                       && \
     yum install -y --setopt=tsflags='' libffi-devel                                                   && \
     pip2.7 install --force-reinstall                                                                     \
-                   --upgrade --user pip                                                                  \
-                                    setuptools                                                        && \
-    /root/.local/bin/pip2.7 install --user "ansible < 3.0"                                               \
-                                           "pexpect >= 3.3"                                              \
-                                           pycurl                                                        \
-                                           urlgrabber                                                 && \
+                   --upgrade --user pip                                                               && \
+    /root/.local/bin/pip2.7 install --force-reinstall                                                    \
+                                    --upgrade --user setuptools                                       && \
+    /root/.local/bin/pip2.7 install --force-reinstall                                                    \
+                                    --upgrade --user "ansible < 3.0"                                     \
+                                                     "pexpect >= 3.3"                                    \
+                                                     pycurl                                              \
+                                                     urlgrabber                                       && \
     cp /usr/lib64/python2.6/site-packages/*sqlitecache* /root/.local/lib/python2.7/site-packages/     && \
     ln -s /usr/lib/python2.6/site-packages/yum /root/.local/lib/python2.7/site-packages/yum           && \
     ln -s /usr/lib/python2.6/site-packages/rpmUtils /root/.local/lib/python2.7/site-packages/rpmUtils && \

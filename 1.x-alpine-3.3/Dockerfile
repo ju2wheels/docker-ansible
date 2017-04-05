@@ -17,15 +17,21 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
             openssl                                                                \
             python                                                              && \
     apk add --virtual ansible-build-deps                                           \
-            gmp-dev                                                                \
-            libffi-dev                                                             \
-            openssl-dev                                                            \
-            py-pip                                                                 \
-            python-dev                                                             \
-            yaml-dev                                                            && \
-    pip install --upgrade --user pip                                            && \
-    pip2.7 install --user "ansible < 2.0"                                          \
-                          "pexpect >= 3.3"                                      && \
+                      curl-dev                                                     \
+                      gmp-dev                                                      \
+                      libffi-dev                                                   \
+                      openssl-dev                                                  \
+                      py-pip                                                       \
+                      python-dev                                                   \
+                      yaml-dev                                                  && \
+    pip install --force-reinstall                                                  \
+                --upgrade --user pip                                            && \
+    pip2.7 install --force-reinstall                                               \
+                   --upgrade --user setuptools                                  && \
+    pip2.7 install --force-reinstall                                               \
+                   --upgrade --user "ansible < 2.0"                                \
+                                    "pexpect >= 3.3"                               \
+                                    pycurl                                      && \
     apk del ansible-build-deps                                                  && \
     rm -rf /root/.cache                                                            \
            /var/cache/apk/*

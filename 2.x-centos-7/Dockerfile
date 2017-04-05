@@ -14,18 +14,25 @@ RUN yum upgrade -y                                                              
                    openssl                                                                     \
                    python-dnf                                                               && \
     yum install -y gmp-devel                                                                   \
+                   libcurl-devel                                                               \
                    libyaml-devel                                                               \
                    openssl-devel                                                               \
                    python-devel                                                                \
                    python2-pip                                                              && \
     yum install -y --setopt=tsflags='' libffi-devel                                         && \
-    pip install --upgrade --user pip                                                        && \
-    pip2.7 install --user "ansible < 3.0"                                                      \
-                          "pexpect >= 3.3"                                                  && \
+    pip install --force-reinstall                                                              \
+                --upgrade --user pip                                                        && \
+    pip2.7 install --force-reinstall                                                           \
+                   --upgrade --user setuptools                                              && \
+    pip2.7 install --force-reinstall                                                           \
+                   --upgrade --user "ansible < 3.0"                                            \
+                                    "pexpect >= 3.3"                                           \
+                                    pycurl                                                  && \
     yum remove -y  gmp-devel                                                                   \
                    keyutils-libs-devel                                                         \
                    krb5-devel                                                                  \
                    libcom_err-devel                                                            \
+                   libcurl-devel                                                               \
                    libffi-devel                                                                \
                    libkadm5                                                                    \
                    libselinux-devel                                                            \
