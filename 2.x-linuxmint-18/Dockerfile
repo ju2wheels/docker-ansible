@@ -18,7 +18,7 @@ RUN apt-get update                                   && \
                        openssl                          \
                        python                           \
                        python-apt                       \
-                       python-software-properties &&    \
+                       python-software-properties    && \
     apt-get --no-install-recommends                     \
             -y install libcurl4-gnutls-dev              \
                        libffi-dev                       \
@@ -41,7 +41,6 @@ RUN apt-get update                                   && \
     apt-get -y purge libcurl4-gnutls-dev                \
                      libexpat1-dev                      \
                      libffi-dev                         \
-                     libglib2.0-0                       \
                      libgmp-dev                         \
                      libgmpxx4ldbl                      \
                      libgnutls-dev                      \
