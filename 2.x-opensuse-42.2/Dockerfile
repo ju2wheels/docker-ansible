@@ -15,6 +15,7 @@ RUN zypper --non-interactive update                  && \
                    gpg2                                 \
                    openssl                              \
                    python                               \
+                   python-xml                           \
                    python-zypp                       && \
     zypper --non-interactive                            \
            install --no-recommends                      \

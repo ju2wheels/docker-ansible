@@ -11,6 +11,7 @@ RUN zypper update -y                                             && \
                                       gpg2                          \
                                       openssl                       \
                                       python                        \
+                                      python-xml                    \
                                       python-zypp                && \
     zypper install --no-recommends -y gmp-devel                     \
                                       libcurl-devel                 \
