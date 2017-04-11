@@ -4,8 +4,7 @@ MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ENV PYCURL_SSL_LIBRARY "nss"
 
-RUN yum upgrade -y                                      && \
-    yum groupinstall -y "Development Tools"             && \
+RUN yum groupinstall -y "Development Tools"             && \
     yum install -y crontabs                                \
                    curl                                    \
                    git                                     \
