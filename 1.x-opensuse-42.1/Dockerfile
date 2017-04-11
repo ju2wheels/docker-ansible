@@ -44,8 +44,7 @@ RUN zypper --non-interactive update                  && \
                   libyaml-devel                         \
                   python-devel                          \
                   python-pip                            \
-                  python-setuptools                     \
-                  python-xml                         && \
+                  python-setuptools                  && \
     rm -rf /root/.cache                                 \
            /var/cache/zypp
 
