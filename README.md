@@ -261,6 +261,7 @@ ansible-playbook docker_test.yml
 ```
 
 Note: In order to run the the unit tests, you will need the following installed on the host running the tests:
+
     * ansible
     * docker
     * docker-py
