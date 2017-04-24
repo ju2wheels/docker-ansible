@@ -43,7 +43,6 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |`1.x-ubuntu-14.04`       |
 |`1.x-ubuntu-16.04`       |
 
-<br/>
 
 |2.x Docker Image Tags    |
 |-------------------------|
@@ -115,6 +114,7 @@ docker run --entrypoint /bin/bash                                   \
            -it ju2wheels/ansible:<tag>
 ```
 
+
 Using a `docker-compose` file:
 
 ```
@@ -133,7 +133,8 @@ services:
       #- ./:/ansible-playbook
       - /home/user/ansible-playbook:/ansible-playbook
 ```
-      
+
+
 You can then run `docker-compose`:
 
 ```
@@ -188,6 +189,7 @@ For the following unit test examples, we assume that your Ansible role meets the
     $ ln -s ../.././testrole
     ```
 
+
 Using the above role structure, all we have to do is add a `docker_test.yml` playbook file to our role's `tests/` directory that
 runs the `docker_container` module (Ansible 2.x) or `docker` module (Ansible 1.x) to execute the `test.yml` playbook inside of
 one of our Docker containers.
@@ -218,6 +220,7 @@ Using Ansible 1.x `docker_test.yml` may look like this:
         - ju2wheels/ansible:1.x-ubuntu-14.04
         - ju2wheels/ansible:1.x-ubuntu-16.04
 ```
+
 
 Using Ansible 2.x `docker_test.yml` may look like this:
 
