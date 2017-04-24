@@ -90,7 +90,7 @@ Each image `Dockerfile` has its commands organized as follows:
 9. Set the default `entrypoint` to `ansible-playbook`.
 
 Note: We install Ansible at the user level instead of a virtualenv because some of the Python modules can only be installed via distro packages
-and not from PyPi. Therefore by installing a global Python 2.7 on the distro and those depdencies using the system packaging we can still access
+and not from PyPi. Therefore by installing a global Python 2.7 on the distro and those dependencies using the system packaging we can still access
 them by installing Ansible and all other dependencies at the user level while not cluttering up the system level Python packages or potentially
 crippling the system.
 
