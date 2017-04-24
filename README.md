@@ -262,9 +262,9 @@ ansible-playbook docker_test.yml
 
 Note: In order to run the the unit tests, you will need the following installed on the host running the tests:
 
-    * ansible
-    * docker
-    * docker-py
+* ansible
+* docker
+* docker-py
 
 See the [ju2wheels.pyenv](https://github.com/ju2wheels/ansible-galaxy-ju2wheels.pyenv/tree/master/tests) Ansible Galaxy role unit test
 for a more concrete example.
