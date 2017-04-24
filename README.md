@@ -15,62 +15,62 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 2. The Linux distribution name.
 3. The Linux distribution version.
 
-|1.x Docker Image Tags    |
-|-------------------------|
-|`1.x-alpine-3.3`         |
-|`1.x-alpine-3.4`         |
-|`1.x-alpine-3.5`         |
-|`1.x-amazonlinux-2016.09`|
-|`1.x-amazonlinux-2017.03`|
-|`1.x-centos-6`           |
-|`1.x-centos-7`           |
-|`1.x-debian-7`           |
-|`1.x-debian-8`           |
-|`1.x-debian-9`           |
-|`1.x-fedora-20`          |
-|`1.x-fedora-21`          |
-|`1.x-fedora-22`          |
-|`1.x-fedora-23`          |
-|`1.x-fedora-24`          |
-|`1.x-fedora-25`          |
-|`1.x-linuxmint-17`       |
-|`1.x-linuxmint-18`       |
-|`1.x-opensuse-13.1`      |
-|`1.x-opensuse-13.2`      |
-|`1.x-opensuse-42.1`      |
-|`1.x-opensuse-42.2`      |
-|`1.x-ubuntu-12.04`       |
-|`1.x-ubuntu-14.04`       |
-|`1.x-ubuntu-16.04`       |
+|1.x Docker Image Tags  |
+|-----------------------|
+|1.x-alpine-3.3         |
+|1.x-alpine-3.4         |
+|1.x-alpine-3.5         |
+|1.x-amazonlinux-2016.09|
+|1.x-amazonlinux-2017.03|
+|1.x-centos-6           |
+|1.x-centos-7           |
+|1.x-debian-7           |
+|1.x-debian-8           |
+|1.x-debian-9           |
+|1.x-fedora-20          |
+|1.x-fedora-21          |
+|1.x-fedora-22          |
+|1.x-fedora-23          |
+|1.x-fedora-24          |
+|1.x-fedora-25          |
+|1.x-linuxmint-17       |
+|1.x-linuxmint-18       |
+|1.x-opensuse-13.1      |
+|1.x-opensuse-13.2      |
+|1.x-opensuse-42.1      |
+|1.x-opensuse-42.2      |
+|1.x-ubuntu-12.04       |
+|1.x-ubuntu-14.04       |
+|1.x-ubuntu-16.04       |
 
 
-|2.x Docker Image Tags    |
-|-------------------------|
-|`2.x-alpine-3.3`         |
-|`2.x-alpine-3.4`         |
-|`2.x-alpine-3.5`         |
-|`2.x-amazonlinux-2016.09`|
-|`2.x-amazonlinux-2017.03`|
-|`2.x-centos-6`           |
-|`2.x-centos-7`           |
-|`2.x-debian-7`           |
-|`2.x-debian-8`           |
-|`2.x-debian-9`           |
-|`2.x-fedora-20`          |
-|`2.x-fedora-21`          |
-|`2.x-fedora-22`          |
-|`2.x-fedora-23`          |
-|`2.x-fedora-24`          |
-|`2.x-fedora-25`          |
-|`2.x-linuxmint-17`       |
-|`2.x-linuxmint-18`       |
-|`2.x-opensuse-13.1`      |
-|`2.x-opensuse-13.2`      |
-|`2.x-opensuse-42.1`      |
-|`2.x-opensuse-42.2`      |
-|`2.x-ubuntu-12.04`       |
-|`2.x-ubuntu-14.04`       |
-|`2.x-ubuntu-16.04`       |
+|2.x Docker Image Tags  |
+|-----------------------|
+|2.x-alpine-3.3         |
+|2.x-alpine-3.4         |
+|2.x-alpine-3.5         |
+|2.x-amazonlinux-2016.09|
+|2.x-amazonlinux-2017.03|
+|2.x-centos-6           |
+|2.x-centos-7           |
+|2.x-debian-7           |
+|2.x-debian-8           |
+|2.x-debian-9           |
+|2.x-fedora-20          |
+|2.x-fedora-21          |
+|2.x-fedora-22          |
+|2.x-fedora-23          |
+|2.x-fedora-24          |
+|2.x-fedora-25          |
+|2.x-linuxmint-17       |
+|2.x-linuxmint-18       |
+|2.x-opensuse-13.1      |
+|2.x-opensuse-13.2      |
+|2.x-opensuse-42.1      |
+|2.x-opensuse-42.2      |
+|2.x-ubuntu-12.04       |
+|2.x-ubuntu-14.04       |
+|2.x-ubuntu-16.04       |
 
 Note: The Alpine 3.3 and 3.4 Docker images dont have `shadow-utils` available to them, so this has been backported from Alpine 3.5 so that
 the `user` Ansible module still works.
