@@ -148,7 +148,7 @@ RUN apt-get update                                          && \
                      libkadm5srv-mit9                          \
                      libkdb5-7 libkrb5-dev                     \
                      libldap2-dev                              \
-                     libltdl-devl                              \
+                     libltdl-dev                               \
                      libodbc1                                  \
                      libp11-kit-dev                            \
                      libpq-dev                                 \
@@ -158,7 +158,7 @@ RUN apt-get update                                          && \
                      libpython2.7-dev                          \
                      librtmp-dev                               \
                      libssl-dev                                \
-                     libsysbdb5                                \
+                     libsybdb5                                 \
                      libtasn1-6-dev                            \
                      libxml2-dev                               \
                      libxslt1-dev                              \

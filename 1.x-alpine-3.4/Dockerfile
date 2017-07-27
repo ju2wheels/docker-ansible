@@ -4,6 +4,9 @@ MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
 RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             && \
+    apk add --repository "https://dl-cdn.alpinelinux.org/alpine/v3.3/main"         \
+            --update "freetds-dev=0.95.21-r0"                                   && \
+    rm -rf /var/cache/apk/*                                                     && \            
     apk add --repository "https://dl-cdn.alpinelinux.org/alpine/v3.5/community"    \
             --update-cache shadow                                               && \
     rm -rf /var/cache/apk/*                                                     && \
@@ -18,7 +21,6 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
             python                                                              && \
     apk add --virtual ansible-build-deps                                           \
             curl-dev                                                               \
-            freetds-dev                                                            \
             gmp-dev                                                                \
             libffi-dev                                                             \
             libvirt-dev                                                            \
