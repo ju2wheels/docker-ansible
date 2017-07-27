@@ -1,0 +1,181 @@
+Ansible dependencies (as of 2.3, inconclusive) based on docs
+
+Python modules (should be part of core on most systems):
+
+hashlib
+hmac
+json
+socket
+
+Python modules (normal install):
+
+a10sdk
+acos-client
+ansible-tower-cli
+apache-libcloud
+avisdk
+azure
+bigsuds
+boto
+boto3
+botocore
+BeautifulSoup
+clc-sdk
+cs
+datadog
+django
+dnsimple
+dnspython
+docker
+docker-compose
+docker-py
+dopy
+github3.py
+google-auth
+influxdb
+kazoo
+libvirt-python # requires libvirt-dev
+linode-python
+lxc-python2 # requires lxc-dev
+lxml  # requires libxml2-dev
+netapp-lib
+ovh
+packet-python
+pan-python
+paramiko
+passlib
+pexpect >= 3.3
+pingdom
+profitbricks
+proxmoxer
+psycopg2 # postgresql-dev or libpq-dev
+pubnub-blocks-client
+pyapi-gitlab
+pycurl
+pyexpect
+pyFG
+pyhcl
+pyghmi
+pymongo
+pymssql # requires freetds-dev, https://github.com/pymssql/pymssql/issues/432
+pyodbc # requires unixodbc-dev
+pyOpenSSL
+pypureomapi
+pyrax
+pysnmp
+pysphere
+python-consul
+python-dateutil
+python-hpilo
+python-keyczar
+python-nmcli
+python-taiga
+pyvmomi 
+PyYAML
+redispy
+requests
+requests-toolbelt
+sendgrid
+shade
+supervisor
+urlgrabber
+urllib3
+virtualenv
+xmpppy
+zabbix-api
+
+Python modules (no force reinstall):
+
+aos-pyez
+f5-sdk
+google-cloud-pubsub
+infinisdk
+junos-eznc # requires libxml2-dev and libxslt-dev
+nailgun
+ncclient
+os-client-config
+ovirt-engine-sdk-python
+pushbullet.py
+python-jenkins
+python-ldap # requires openldap-dev or libldap2-dev
+softlayer
+solidfire-sdk-python
+
+
+
+System packages:
+
+acl (setfacl and getfacl)
+at
+bash
+bzip2
+bzr
+cron
+debconf
+debconf-utils
+dpkg
+gconftool-2
+getent
+git
+gzip
+hostname
+make
+mercurial
+mkfs
+netcat
+openssl
+passwd
+patch
+rpm (debian/ubuntu)
+svn (subversion)
+tar
+time
+unzip
+yaml
+zip
+
+
+Skipped explicitly installing (some part of base system):
+
+atomic (containers)
+apache (a2enmod, a2dismod)
+aptitude
+bower
+bprobe
+bundler
+composer (PHP)
+cpanm
+dbus (for nmcli)
+facter
+firewalld (python 2 binding)
+glusterfs (cli)
+libselinux-python
+libsemanage-python
+lldp
+LogEntries agent
+lxc
+mosquitto
+MySQL
+mysql (command line binary)
+mysqldump (command line binary)
+NetworkManager-glib (for nmcli)
+nmcli
+npm
+ohai
+open-iscsi library and tools (iscsiadm)
+ovirtsdk
+ovs-vsctl
+pear (php)
+php
+policycoreutils-python
+puppet
+python-apt (python 2)
+python3-apt (python 3)
+rhnreg_ks
+ruby-json
+runit
+serverless
+subscription-manager (RHEL)
+ufw
+Univention
+unixODBC

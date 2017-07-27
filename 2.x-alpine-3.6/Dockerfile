@@ -1,4 +1,4 @@
-FROM       alpine:3.5
+FROM       alpine:3.6
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
 ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -37,7 +37,7 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                         && \
     pip2.7 install --force-reinstall                                           \
                    --upgrade --user a10sdk                                     \
                                     acos-client                                \
-                                    "ansible < 2.0"                            \
+                                    "ansible < 3.0"                            \
                                     ansible-tower-cli                          \
                                     apache-libcloud                            \
                                     avisdk                                     \

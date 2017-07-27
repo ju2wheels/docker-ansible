@@ -1,16 +1,21 @@
-FROM       amazonlinux:2016.09
+FROM       fedora:26
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-ENV PYCURL_SSL_LIBRARY "nss"
+ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
-RUN yum groupinstall -y "Development Tools"                 && \
-    yum install -y crontabs                                    \
+RUN dnf upgrade -y                                          && \
+    dnf groupinstall -y "Development Tools"                 && \
+    dnf install -y crontabs                                    \
                    curl                                        \
+                   dnf                                         \
+                   gcc-c++                                     \
                    git                                         \
                    gnupg2                                      \
-                   openssl                                  && \
-    yum install -y freetds-devel                               \
+                   openssl                                     \
+                   python                                      \
+                   python-dnf                                  \
+                   redhat-rpm-config                        && \
+    dnf install -y freetds-devel                               \
                    gmp-devel                                   \
                    libcurl-devel                               \
                    libffi-devel                                \
@@ -19,9 +24,9 @@ RUN yum groupinstall -y "Development Tools"                 && \
                    libyaml-devel                               \
                    openldap-devel                              \
                    openssl-devel                               \
-                   postgresql92-devel                          \
-                   python27-devel                              \
-                   python27-pip                                \
+                   postgresql-devel                            \
+                   python-devel                                \
+                   python-pip                                  \
                    unixODBC-devel                           && \
     pip install --force-reinstall                              \
                 --upgrade --user pip                        && \
@@ -115,12 +120,11 @@ RUN yum groupinstall -y "Development Tools"                 && \
                                     python-ldap                \
                                     softlayer                  \
                                     solidfire-sdk-python    && \
-    yum remove -y automake19                                   \
-                  cyrus-sasl                                   \
+    dnf remove -y cyrus-sasl                                   \
                   cyrus-sasl-devel                             \
                   freetds                                      \
                   freetds-devel                                \
-                  gnutls                                       \
+                  gmp-c++                                      \
                   gmp-devel                                    \
                   keyutils-libs-devel                          \
                   krb5-devel                                   \
@@ -130,9 +134,9 @@ RUN yum groupinstall -y "Development Tools"                 && \
                   libgcrypt-devel                              \
                   libgpg-error-devel                           \
                   libkadm5                                     \
+                  libpkgconf                                   \
                   libselinux-devel                             \
                   libsepol-devel                               \
-                  libtool-ltdl                                 \
                   libverto-devel                               \
                   libxml2-devel                                \
                   libxslt                                      \
@@ -141,14 +145,18 @@ RUN yum groupinstall -y "Development Tools"                 && \
                   libyaml-devel                                \
                   openldap-devel                               \
                   openssl-devel                                \
-                  postgresql92                                 \
-                  postgresql92-devel                           \
-                  postgresql92-libs                            \
-                  python27-backports                           \
-                  python27-backports-ssl_match_hostname        \
-                  python27-devel                               \
-                  python27-pip                                 \
-                  python27-setuptools                          \
+                  pcre-cpp                                     \
+                  pcre-devel                                   \
+                  pcre-utf16                                   \
+                  pcre-utf32                                   \
+                  pkgconf                                      \
+                  pkgconf-m4                                   \
+                  pkgconf-pkg-config                           \
+                  postgresql-devel                             \
+                  postgresql-libs                              \
+                  python-rpm-macros                            \
+                  python2-devel                                \
+                  python2-rpm-macros                           \
                   unixODBC                                     \
                   unixODBC-devel                               \
                   xz-devel                                     \

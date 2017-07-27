@@ -17,21 +17,115 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
             openssl                                                                \
             python                                                              && \
     apk add --virtual ansible-build-deps                                           \
-                      curl-dev                                                     \
-                      gmp-dev                                                      \
-                      libffi-dev                                                   \
-                      openssl-dev                                                  \
-                      py-pip                                                       \
-                      python-dev                                                   \
-                      yaml-dev                                                  && \
+            curl-dev                                                               \
+            freetds-dev                                                            \
+            gmp-dev                                                                \
+            libffi-dev                                                             \
+            libvirt-dev                                                            \
+            libxml2-dev                                                            \
+            libxslt-dev                                                            \
+            lxc-dev                                                                \
+            openldap-dev                                                           \
+            openssl-dev                                                            \
+            postgresql-dev                                                         \
+            py-pip                                                                 \
+            python-dev                                                             \
+            unixodbc-dev                                                           \
+            yaml-dev                                                            && \
     pip install --force-reinstall                                                  \
                 --upgrade --user pip                                            && \
     pip2.7 install --force-reinstall                                               \
                    --upgrade --user setuptools                                  && \
     pip2.7 install --force-reinstall                                               \
-                   --upgrade --user "ansible < 2.0"                                \
+                   --upgrade --user a10sdk                                         \
+                                    acos-client                                    \
+                                    "ansible < 2.0"                                \
+                                    ansible-tower-cli                              \
+                                    apache-libcloud                                \
+                                    avisdk                                         \
+                                    azure                                          \
+                                    bigsuds                                        \
+                                    boto                                           \
+                                    boto3                                          \
+                                    botocore                                       \
+                                    BeautifulSoup                                  \
+                                    clc-sdk                                        \
+                                    cs                                             \
+                                    datadog                                        \
+                                    django                                         \
+                                    dnsimple                                       \
+                                    dnspython                                      \
+                                    docker                                         \
+                                    docker-compose                                 \
+                                    docker-py                                      \
+                                    dopy                                           \
+                                    github3.py                                     \
+                                    google-auth                                    \
+                                    influxdb                                       \
+                                    kazoo                                          \
+                                    libvirt-python                                 \
+                                    linode-python                                  \
+                                    lxc-python2                                    \
+                                    lxml                                           \
+                                    netapp-lib                                     \
+                                    ovh                                            \
+                                    packet-python                                  \
+                                    pan-python                                     \
+                                    paramiko                                       \
+                                    passlib                                        \
                                     "pexpect >= 3.3"                               \
-                                    pycurl                                      && \
+                                    pingdom                                        \
+                                    profitbricks                                   \
+                                    proxmoxer                                      \
+                                    psycopg2                                       \
+                                    pubnub-blocks-client                           \
+                                    pyapi-gitlab                                   \
+                                    pycurl                                         \
+                                    pyexpect                                       \
+                                    pyFG                                           \
+                                    pyhcl                                          \
+                                    pyghmi                                         \
+                                    pymongo                                        \
+                                    pymssql                                        \
+                                    pyodbc                                         \
+                                    pyOpenSSL                                      \
+                                    pypureomapi                                    \
+                                    pyrax                                          \
+                                    pysnmp                                         \
+                                    pysphere                                       \
+                                    python-consul                                  \
+                                    python-dateutil                                \
+                                    python-hpilo                                   \
+                                    python-keyczar                                 \
+                                    python-nmcli                                   \
+                                    python-taiga                                   \
+                                    pyvmomi                                        \
+                                    PyYAML                                         \
+                                    redispy                                        \
+                                    requests                                       \
+                                    requests-toolbelt                              \
+                                    sendgrid                                       \
+                                    shade                                          \
+                                    supervisor                                     \
+                                    urlgrabber                                     \
+                                    urllib3                                        \
+                                    virtualenv                                     \
+                                    xmpppy                                         \
+                                    zabbix-api                                  && \
+    pip2.7 install --upgrade --user aos-pyez                                       \
+                                    f5-sdk                                         \
+                                    google-cloud-pubsub                            \
+                                    infinisdk                                      \
+                                    junos-eznc                                     \
+                                    nailgun                                        \
+                                    ncclient                                       \
+                                    os-client-config                               \
+                                    ovirt-engine-sdk-python                        \
+                                    pushbullet.py                                  \
+                                    python-jenkins                                 \
+                                    python-ldap                                    \
+                                    softlayer                                      \
+                                    solidfire-sdk-python                        && \
     apk del ansible-build-deps                                                  && \
     rm -rf /root/.cache                                                            \
            /var/cache/apk/*

@@ -1,48 +1,35 @@
-FROM       debian:9
+FROM       fedora:26
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV DEBIAN_FRONTEND "noninteractive"
-ENV PATH            "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
-RUN apt-get update                                          && \
-    apt-get -y dist-upgrade                                 && \
-    apt-get --no-install-recommends                            \
-            -y install aptitude                                \
-                       build-essential                         \
-                       ca-certificates                         \
-                       cron                                    \
-                       curl                                    \
-                       git                                     \
-                       gnupg2                                  \
-                       openssh-client                          \
-                       openssl                                 \
-                       python                                  \
-                       python-apt                              \
-                       python-ldap                             \
-                       python-minimal                          \
-                       python2.7                            && \
-    apt-get --no-install-recommends                            \
-            -y install freetds-dev                             \
-                       libcurl4-gnutls-dev                     \
-                       libffi-dev                              \
-                       libgmp-dev                              \
-                       libgnutls28-dev                         \
-                       libldap2-dev                            \
-                       libpq-dev                               \
-                       libssl-dev                              \
-                       libxml2-dev                             \
-                       libxslt1-dev                            \
-                       libyaml-dev                             \
-                       python-pip                              \
-                       python-pycparser                        \
-                       python-setuptools                       \
-                       python2.7-dev                           \
-                       unixodbc-dev                         && \
-    pip2 install --force-reinstall                             \
-                 --upgrade --user wheel                     && \
-    pip2 install --force-reinstall                             \
-                 --upgrade --user cffi                         \
-                                  pip                       && \
+RUN dnf upgrade -y                                          && \
+    dnf groupinstall -y "Development Tools"                 && \
+    dnf install -y crontabs                                    \
+                   curl                                        \
+                   dnf                                         \
+                   gcc-c++                                     \
+                   git                                         \
+                   gnupg2                                      \
+                   openssl                                     \
+                   python                                      \
+                   python-dnf                                  \
+                   redhat-rpm-config                        && \
+    dnf install -y freetds-devel                               \
+                   gmp-devel                                   \
+                   libcurl-devel                               \
+                   libffi-devel                                \
+                   libxml2-devel                               \
+                   libxslt-devel                               \
+                   libyaml-devel                               \
+                   openldap-devel                              \
+                   openssl-devel                               \
+                   postgresql-devel                            \
+                   python-devel                                \
+                   python-pip                                  \
+                   unixODBC-devel                           && \
+    pip install --force-reinstall                              \
+                --upgrade --user pip                        && \
     pip2.7 install --force-reinstall                           \
                    --upgrade --user setuptools              && \
     pip2.7 install --force-reinstall                           \
@@ -130,59 +117,52 @@ RUN apt-get update                                          && \
                                     ovirt-engine-sdk-python    \
                                     pushbullet.py              \
                                     python-jenkins             \
+                                    python-ldap                \
                                     softlayer                  \
                                     solidfire-sdk-python    && \
-    apt-get -y purge freetds-common                            \
-                     freetds-dev                               \
-                     icu-devtools                              \
-                     libct4                                    \
-                     libcurl4-gnutls-dev                       \
-                     libexpat1-dev                             \
-                     libffi-dev                                \
-                     libglib2.0-0                              \
-                     libgmp-dev                                \
-                     libgmpxx4ldbl                             \
-                     libgnutls-dane0                           \
-                     libgnutls-openssl27                       \
-                     libgnutls28-dev                           \
-                     libgnutlsxx28                             \
-                     libicu-dev                                \
-                     libicu57                                  \
-                     libidn11-dev                              \
-                     libldap2-dev                              \
-                     libltdl-dev                               \
-                     libltdl7                                  \
-                     libodbc1                                  \
-                     libp11-kit-dev                            \
-                     libpq-dev                                 \
-                     libpq5                                    \
-                     libpython2.7                              \
-                     libpython2.7-dev                          \
-                     libssl-dev                                \
-                     libsybdb5                                 \
-                     libtasn1-6-dev                            \
-                     libunbound2                               \
-                     libxml2                                   \
-                     libxml2-dev                               \
-                     libxslt1-dev                              \
-                     libxslt1.1                                \
-                     libyaml-0-2                               \
-                     libyaml-dev                               \
-                     nettle-dev                                \
-                     odbcinst                                  \
-                     odbcinst1debian2                          \
-                     pkg-config                                \
-                     python-pip                                \
-                     python-pip-whl                            \
-                     python-pkg-resources                      \
-                     python-ply                                \
-                     python-pycparser                          \
-                     python-setuptools                         \
-                     python2.7-dev                             \
-                     unixodbc-dev                              \
-                     zlib1g-dev                             && \
+    dnf remove -y cyrus-sasl                                   \
+                  cyrus-sasl-devel                             \
+                  freetds                                      \
+                  freetds-devel                                \
+                  gmp-c++                                      \
+                  gmp-devel                                    \
+                  keyutils-libs-devel                          \
+                  krb5-devel                                   \
+                  libcom_err-devel                             \
+                  libcurl-devel                                \
+                  libffi-devel                                 \
+                  libgcrypt-devel                              \
+                  libgpg-error-devel                           \
+                  libkadm5                                     \
+                  libpkgconf                                   \
+                  libselinux-devel                             \
+                  libsepol-devel                               \
+                  libverto-devel                               \
+                  libxml2-devel                                \
+                  libxslt                                      \
+                  libxslt-devel                                \
+                  libyaml                                      \
+                  libyaml-devel                                \
+                  openldap-devel                               \
+                  openssl-devel                                \
+                  pcre-cpp                                     \
+                  pcre-devel                                   \
+                  pcre-utf16                                   \
+                  pcre-utf32                                   \
+                  pkgconf                                      \
+                  pkgconf-m4                                   \
+                  pkgconf-pkg-config                           \
+                  postgresql-devel                             \
+                  postgresql-libs                              \
+                  python-rpm-macros                            \
+                  python2-devel                                \
+                  python2-rpm-macros                           \
+                  unixODBC                                     \
+                  unixODBC-devel                               \
+                  xz-devel                                     \
+                  zlib-devel                                && \
     rm -rf /root/.cache                                        \
-           /var/cache/apt/*
+           /var/cache/yum
 
 CMD        []
 ENTRYPOINT ["ansible-playbook"]

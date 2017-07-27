@@ -1,8 +1,8 @@
 # docker-ansible
 
 [docker-ansible](https://github.com/ju2wheels/docker-ansible) provides [ju2wheels/ansible](https://hub.docker.com/r/ju2wheels/ansible/) Docker Hub
-images for various Linux distribution images with Ansible 1.x/2.x installed from PyPi using Python 2.7 at the user level instead of at the system
-level so as to minimize conflicts with system Python packages.
+images for various Linux distribution images with Ansible 1.x/2.x and core module dependencies installed from PyPi using Python 2.7 at the user
+level instead of at the system level so as to minimize conflicts with system Python packages.
 
 The goal of these images is to provide a container that is capable of being used for both unit testing (by running Ansible against the local
 container as if it were a remote machine) as well as being suitable for use as an Ansible host.
@@ -20,6 +20,7 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |1.x-alpine-3.3         |
 |1.x-alpine-3.4         |
 |1.x-alpine-3.5         |
+|1.x-alpine-3.6         |
 |1.x-amazonlinux-2016.09|
 |1.x-amazonlinux-2017.03|
 |1.x-centos-6           |
@@ -33,6 +34,7 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |1.x-fedora-23          |
 |1.x-fedora-24          |
 |1.x-fedora-25          |
+|1.x-fedora-26          |
 |1.x-linuxmint-17       |
 |1.x-linuxmint-18       |
 |1.x-opensuse-13.1      |
@@ -49,6 +51,7 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |2.x-alpine-3.3         |
 |2.x-alpine-3.4         |
 |2.x-alpine-3.5         |
+|2.x-alpine-3.6         |
 |2.x-amazonlinux-2016.09|
 |2.x-amazonlinux-2017.03|
 |2.x-centos-6           |
@@ -62,6 +65,7 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |2.x-fedora-23          |
 |2.x-fedora-24          |
 |2.x-fedora-25          |
+|2.x-fedora-26          |
 |2.x-linuxmint-17       |
 |2.x-linuxmint-18       |
 |2.x-opensuse-13.1      |
@@ -267,7 +271,7 @@ Note: In order to run the the unit tests, you will need the following installed 
 
 * ansible
 * docker
-* docker-py
+* docker Python module (or docker-py for older versions of Docker)
 
 See the [ju2wheels.pyenv](https://github.com/ju2wheels/ansible-galaxy-ju2wheels.pyenv/tree/master/tests) Ansible Galaxy role unit test
 for a more concrete example.
