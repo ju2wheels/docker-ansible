@@ -11,7 +11,8 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
     apk add --repository "https://dl-cdn.alpinelinux.org/alpine/v3.5/community"    \
             --update-cache shadow                                               && \
     rm -rf /var/cache/apk/*                                                     && \
-    apk add bash                                                                   \
+    apk add --update                                                               \
+            bash                                                                   \
             build-base                                                             \
             curl                                                                   \
             git                                                                    \
