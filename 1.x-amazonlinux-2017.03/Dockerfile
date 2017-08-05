@@ -96,7 +96,6 @@ RUN yum groupinstall -y "Development Tools"                 && \
                                     sendgrid                   \
                                     shade                      \
                                     supervisor                 \
-                                    urlgrabber                 \
                                     urllib3                    \
                                     virtualenv                 \
                                     xmpppy                     \
