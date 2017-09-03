@@ -37,7 +37,6 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |1.x-fedora-26          |
 |1.x-linuxmint-17       |
 |1.x-linuxmint-18       |
-|1.x-opensuse-42.1      |
 |1.x-opensuse-42.2      |
 |1.x-ubuntu-12.04       |
 |1.x-ubuntu-14.04       |
@@ -66,7 +65,6 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |2.x-fedora-26          |
 |2.x-linuxmint-17       |
 |2.x-linuxmint-18       |
-|2.x-opensuse-42.1      |
 |2.x-opensuse-42.2      |
 |2.x-ubuntu-12.04       |
 |2.x-ubuntu-14.04       |
