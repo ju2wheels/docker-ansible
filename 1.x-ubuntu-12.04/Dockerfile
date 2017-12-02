@@ -36,7 +36,8 @@ RUN apt-get update                                          && \
                        python-pip                              \
                        python-setuptools                       \
                        unixodbc-dev                         && \
-    pip install --upgrade --user pip                        && \
+    pip install --index-url=https://pypi.python.org/simple/    \
+                --upgrade --user pip                        && \
     pip2.7 install --force-reinstall                           \
                    --upgrade --user setuptools              && \
     pip2.7 install --force-reinstall                           \
