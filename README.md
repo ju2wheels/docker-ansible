@@ -111,7 +111,7 @@ docker run --entrypoint /bin/bash                                   \
            --env ANSIBLE_CONFIG=/ansible-playbook/ansible.cfg       \
            --env ANSIBLE_INVENTORY=/ansible-playbook/inventory      \
            --volume '/home/user/ansible-playbook:/ansible-playbook' \
-           -it ju2wheels/ansible:<tag>
+           -it ju2wheels/ansible:<tag> <ansible-playbook ARGS> <playbook.yml>
 ```
 
 
@@ -176,6 +176,9 @@ For the following unit test examples, we assume that your Ansible role meets the
     # At a minimum, inventory and roles variables need to be defined
     inventory = ./inventory
     roles = ./roles
+    [privilege_escalation]
+    # Docker only has su available by default
+    become_method=su
     EOF
 
     $ cat <<EOF > inventory
@@ -203,7 +206,7 @@ Using Ansible 1.x `docker_test.yml` may look like this:
   tasks:
     - name: testrole dockerized unit test
       docker: >
-        command=--extra-vars '{"ansible_become": false}' /ansible-playbook/tests/test.yml
+        command=/ansible-playbook/tests/test.yml
         detach=false
         entrypoint=ansible-playbook
         env={"ANSIBLE_CONFIG": "/ansible-playbook/tests/ansible.cfg", "ANSIBLE_INVENTORY": "/ansible-playbook/tests/inventory", "ANSIBLE_NOCOLOR": 1}
@@ -232,7 +235,7 @@ Using Ansible 2.x `docker_test.yml` may look like this:
     - name: testrole dockerized unit test
       docker_container:
         cleanup: true
-        command: --extra-vars '{"ansible_become": false}' /ansible-playbook/tests/test.yml
+        command: /ansible-playbook/tests/test.yml
         detach: false
         entrypoint: ansible-playbook
         env:
