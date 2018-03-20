@@ -66,7 +66,7 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
                                     google-auth                                    \
                                     influxdb                                       \
                                     kazoo                                          \
-                                    libvirt-python                                 \
+                                    "libvirt-python < 4.1.0"                       \
                                     linode-python                                  \
                                     lxc-python2                                    \
                                     lxml                                           \
