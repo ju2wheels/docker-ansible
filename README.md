@@ -21,9 +21,11 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |1.x-alpine-3.4         |
 |1.x-alpine-3.5         |
 |1.x-alpine-3.6         |
+|1.x-alpine-3.7         |
 |1.x-amazonlinux-2016.09|
 |1.x-amazonlinux-2017.03|
 |1.x-amazonlinux-2017.09|
+|1.x-amazonlinux-2017.12|
 |1.x-centos-6           |
 |1.x-centos-7           |
 |1.x-debian-7           |
@@ -36,12 +38,15 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |1.x-fedora-24          |
 |1.x-fedora-25          |
 |1.x-fedora-26          |
+|1.x-fedora-27          |
 |1.x-linuxmint-17       |
 |1.x-linuxmint-18       |
 |1.x-opensuse-42.2      |
+|1.x-opensuse-42.3      |
 |1.x-ubuntu-12.04       |
 |1.x-ubuntu-14.04       |
 |1.x-ubuntu-16.04       |
+|1.x-ubuntu-18.04       |
 
 
 |2.x Docker Image Tags  |
@@ -50,9 +55,11 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |2.x-alpine-3.4         |
 |2.x-alpine-3.5         |
 |2.x-alpine-3.6         |
+|2.x-alpine-3.7         |
 |2.x-amazonlinux-2016.09|
 |2.x-amazonlinux-2017.03|
 |2.x-amazonlinux-2017.09|
+|2.x-amazonlinux-2017.12|
 |2.x-centos-6           |
 |2.x-centos-7           |
 |2.x-debian-7           |
@@ -65,12 +72,15 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |2.x-fedora-24          |
 |2.x-fedora-25          |
 |2.x-fedora-26          |
+|2.x-fedora-27          |
 |2.x-linuxmint-17       |
 |2.x-linuxmint-18       |
 |2.x-opensuse-42.2      |
+|2.x-opensuse-42.3      |
 |2.x-ubuntu-12.04       |
 |2.x-ubuntu-14.04       |
 |2.x-ubuntu-16.04       |
+|2.x-ubuntu-18.04       |
 
 Note: The Alpine 3.3 and 3.4 Docker images dont have `shadow-utils` available to them, so this has been backported from Alpine 3.5 so that
 the `user` Ansible module still works.
