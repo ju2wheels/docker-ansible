@@ -33,7 +33,8 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                         && \
     pip install --force-reinstall                                              \
                 --upgrade --user pip                                        && \
     pip2.7 install --force-reinstall                                           \
-                   --upgrade --user setuptools                              && \
+                   --upgrade --user cython                                     \
+                                    setuptools                              && \
     pip2.7 install --force-reinstall                                           \
                    --upgrade --user a10sdk                                     \
                                     acos-client                                \
