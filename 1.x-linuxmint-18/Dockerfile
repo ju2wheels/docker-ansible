@@ -62,7 +62,6 @@ RUN apt-get update                                          && \
                                     dnspython                  \
                                     docker                     \
                                     docker-compose             \
-                                    docker-py                  \
                                     dopy                       \
                                     github3.py                 \
                                     google-auth                \

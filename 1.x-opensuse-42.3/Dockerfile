@@ -59,7 +59,6 @@ RUN zypper --non-interactive update                         && \
                                     dnspython                  \
                                     docker                     \
                                     docker-compose             \
-                                    docker-py                  \
                                     dopy                       \
                                     github3.py                 \
                                     google-auth                \

@@ -60,7 +60,6 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
                                     dnspython                                      \
                                     docker                                         \
                                     docker-compose                                 \
-                                    docker-py                                      \
                                     dopy                                           \
                                     github3.py                                     \
                                     google-auth                                    \

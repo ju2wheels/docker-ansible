@@ -56,7 +56,6 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                         && \
                                     dnspython                                  \
                                     docker                                     \
                                     docker-compose                             \
-                                    docker-py                                  \
                                     dopy                                       \
                                     git+https://github.com/pymssql/pymssql.git \
                                     github3.py                                 \

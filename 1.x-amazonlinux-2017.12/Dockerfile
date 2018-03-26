@@ -50,7 +50,6 @@ RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
                                     dnspython                         \
                                     docker                            \
                                     docker-compose                    \
-                                    docker-py                         \
                                     dopy                              \
                                     github3.py                        \
                                     google-auth                       \

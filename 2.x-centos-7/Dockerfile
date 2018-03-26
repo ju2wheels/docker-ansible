@@ -52,7 +52,6 @@ RUN yum upgrade -y                                                              
                                     dnspython                                                  \
                                     docker                                                     \
                                     docker-compose                                             \
-                                    docker-py                                                  \
                                     dopy                                                       \
                                     github3.py                                                 \
                                     google-auth                                                \

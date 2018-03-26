@@ -52,7 +52,6 @@ RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo
                                     dnspython                                       \
                                     docker                                          \
                                     docker-compose                                  \
-                                    docker-py                                       \
                                     dopy                                            \
                                     github3.py                                      \
                                     google-auth                                     \
