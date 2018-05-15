@@ -26,6 +26,7 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |1.x-amazonlinux-2017.03|
 |1.x-amazonlinux-2017.09|
 |1.x-amazonlinux-2017.12|
+|1.x-amazonlinux-2018.03|
 |1.x-centos-6           |
 |1.x-centos-7           |
 |1.x-debian-7           |
@@ -60,6 +61,7 @@ The `ju2wheels/ansible` Docker image tags follow the naming convention that incl
 |2.x-amazonlinux-2017.03|
 |2.x-amazonlinux-2017.09|
 |2.x-amazonlinux-2017.12|
+|2.x-amazonlinux-2018.03|
 |2.x-centos-6           |
 |2.x-centos-7           |
 |2.x-debian-7           |
