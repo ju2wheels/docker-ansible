@@ -75,7 +75,6 @@ RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo
                                     pyapi-gitlab                                    \
                                     pycurl                                          \
                                     pyexpect                                        \
-                                    pyFG                                            \
                                     pyhcl                                           \
                                     pyghmi                                          \
                                     pymongo                                         \

@@ -80,7 +80,6 @@ RUN apk upgrade --latest --update-cache                                     && \
                                     pyapi-gitlab                               \
                                     pycurl                                     \
                                     pyexpect                                   \
-                                    pyFG                                       \
                                     pyhcl                                      \
                                     pyghmi                                     \
                                     pymongo                                    \

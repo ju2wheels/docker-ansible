@@ -74,7 +74,6 @@ RUN yum upgrade -y                                                              
                                     pyapi-gitlab                                               \
                                     pycurl                                                     \
                                     pyexpect                                                   \
-                                    pyFG                                                       \
                                     pyhcl                                                      \
                                     pyghmi                                                     \
                                     pymongo                                                    \

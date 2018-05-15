@@ -81,7 +81,6 @@ RUN zypper --non-interactive update                         && \
                                     pyapi-gitlab               \
                                     pycurl                     \
                                     pyexpect                   \
-                                    pyFG                       \
                                     pyhcl                      \
                                     pyghmi                     \
                                     pymongo                    \

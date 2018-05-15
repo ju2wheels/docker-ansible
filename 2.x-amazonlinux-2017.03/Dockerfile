@@ -72,7 +72,6 @@ RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
                                     pyapi-gitlab                      \
                                     pycurl                            \
                                     pyexpect                          \
-                                    pyFG                              \
                                     pyhcl                             \
                                     pyghmi                            \
                                     pymongo                           \

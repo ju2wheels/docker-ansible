@@ -83,7 +83,6 @@ RUN apt-get update                                          && \
                                     pyapi-gitlab               \
                                     pycurl                     \
                                     pyexpect                   \
-                                    pyFG                       \
                                     pyhcl                      \
                                     pyghmi                     \
                                     pymongo                    \

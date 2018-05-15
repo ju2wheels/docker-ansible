@@ -81,7 +81,6 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
                                     pyapi-gitlab                                   \
                                     pycurl                                         \
                                     pyexpect                                       \
-                                    pyFG                                           \
                                     pyhcl                                          \
                                     pyghmi                                         \
                                     pymongo                                        \
