@@ -18,8 +18,7 @@ RUN apt-get update                                        && \
                        openssl                               \
                        python                                \
                        python-apt                            \
-                       python-ldap                           \
-                       python-software-properties         && \
+                       python-ldap                        && \
     apt-get --no-install-recommends                          \
             -y install freetds-dev                           \
                        libcurl4-gnutls-dev                   \
