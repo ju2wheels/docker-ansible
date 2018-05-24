@@ -22,8 +22,8 @@ RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
                    openldap-devel                                     \
                    openssl-devel                                      \
                    postgresql-devel                                   \
-                   python-devel                                       \
-                   python2-pip                                        \
+                   python27-devel                                     \
+                   python27-pip                                       \
                    unixODBC-devel                                  && \
     pip install --force-reinstall                                     \
                 --upgrade --user pip                               && \
