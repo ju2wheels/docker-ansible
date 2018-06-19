@@ -12,6 +12,7 @@ RUN apk upgrade --latest --update-cache                                     && \
             openssh-client                                                     \
             openssl                                                            \
             python                                                             \
+            rsync                                                              \
             shadow                                                          && \
     apk add --virtual ansible-build-deps                                       \
             curl-dev                                                           \

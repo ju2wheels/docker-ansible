@@ -14,7 +14,8 @@ RUN dnf upgrade -y                                          && \
                    openssl                                     \
                    python                                      \
                    python-dnf                                  \
-                   redhat-rpm-config                        && \
+                   redhat-rpm-config                           \
+                   rsync                                    && \
     dnf install -y freetds-devel                               \
                    gmp-devel                                   \
                    libcurl-devel                               \

@@ -12,7 +12,8 @@ RUN yum upgrade -y                                                              
                    git                                                                                   \
                    gnupg2                                                                                \
                    openssl                                                                               \
-                   python27                                                                           && \
+                   python27                                                                              \
+                   rsync                                                                              && \
     yum install -y curl-devel                                                                            \
                    freetds-devel                                                                         \
                    gmp-devel                                                                             \

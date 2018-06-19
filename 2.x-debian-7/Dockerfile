@@ -20,7 +20,8 @@ RUN apt-get update                                              && \
                        python-apt                                  \
                        python-ldap                                 \
                        python-minimal                              \
-                       python2.7                                && \
+                       python2.7                                   \
+                       rsync                                    && \
     apt-get --no-install-recommends                                \
             -y install freetds-dev                                 \
                        libcurl3-gnutls-dev                         \

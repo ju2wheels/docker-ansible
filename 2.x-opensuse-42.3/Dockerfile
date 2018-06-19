@@ -17,7 +17,8 @@ RUN zypper --non-interactive update                         && \
                    openssl                                     \
                    python                                      \
                    python-xml                                  \
-                   python-zypp                              && \
+                   python-zypp                                 \
+                   rsync                                    && \
     zypper --non-interactive                                   \
            install --no-recommends                             \
                    cyrus-sasl-devel                            \

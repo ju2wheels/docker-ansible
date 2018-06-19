@@ -11,7 +11,8 @@ RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
                    curl                                               \
                    git                                                \
                    gnupg2                                             \
-                   openssl                                         && \
+                   openssl                                            \
+                   rsync                                           && \
     yum install -y freetds-devel                                      \
                    gmp-devel                                          \
                    libcurl-devel                                      \

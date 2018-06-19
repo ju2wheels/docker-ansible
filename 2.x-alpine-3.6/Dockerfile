@@ -13,6 +13,7 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                         && \
             openssh-client                                                     \
             openssl                                                            \
             python                                                             \
+            rsync                                                              \
             shadow                                                          && \
     apk add --virtual ansible-build-deps                                       \
             curl-dev                                                           \

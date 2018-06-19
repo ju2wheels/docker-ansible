@@ -15,7 +15,8 @@ RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo
                    openssl                                                          \
                    python                                                           \
                    python-dnf                                                       \
-                   redhat-rpm-config                                            &&  \
+                   redhat-rpm-config                                                \
+                   rsync                                                         && \
     dnf install -y freetds-devel                                                    \
                    gmp-devel                                                        \
                    libcurl-devel                                                    \

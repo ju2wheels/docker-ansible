@@ -13,7 +13,8 @@ RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo
                    git                                                              \
                    gnupg2                                                           \
                    openssl                                                          \
-                   python-dnf                                                   &&  \
+                   python-dnf                                                       \
+                   rsync                                                        &&  \
     dnf install -y freetds-devel                                                    \
                    gmp-devel                                                        \
                    libcurl-devel                                                    \

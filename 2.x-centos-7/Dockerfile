@@ -13,7 +13,8 @@ RUN yum upgrade -y                                                              
                    git                                                                         \
                    gnupg2                                                                      \
                    openssl                                                                     \
-                   python-dnf                                                               && \
+                   python-dnf                                                                  \
+                   rsync                                                                    && \
     yum install -y freetds-devel                                                               \
                    gmp-devel                                                                   \
                    libcurl-devel                                                               \

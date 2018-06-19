@@ -19,7 +19,8 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
             gnupg                                                                  \
             openssh-client                                                         \
             openssl                                                                \
-            python                                                              && \
+            python                                                                 \
+            rsync                                                               && \
     apk add --virtual ansible-build-deps                                           \
             curl-dev                                                               \
             gmp-dev                                                                \

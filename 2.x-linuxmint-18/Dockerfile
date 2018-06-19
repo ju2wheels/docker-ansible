@@ -19,7 +19,8 @@ RUN apt-get update                                          && \
                        python                                  \
                        python-apt                              \
                        python-ldap                             \
-                       python-software-properties           && \
+                       python-software-properties              \
+                       rsync                                && \
     apt-get --no-install-recommends                            \
             -y install freetds-dev                             \
                        libcurl4-gnutls-dev                     \

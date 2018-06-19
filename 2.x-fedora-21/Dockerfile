@@ -14,7 +14,8 @@ RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo
                    gcc-c++                                                          \
                    git                                                              \
                    gnupg2                                                           \
-                   openssl                                                      &&  \
+                   openssl                                                          \
+                   rsync                                                        &&  \
     yum install -y freetds-devel                                                    \
                    gmp-devel                                                        \
                    libcurl-devel                                                    \
