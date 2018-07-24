@@ -58,6 +58,7 @@ RUN sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/fedora-updates-testing.repo
                                     github3.py                                      \
                                     google-auth                                     \
                                     influxdb                                        \
+                                    jmespath                                        \
                                     kazoo                                           \
                                     linode-python                                   \
                                     lxml                                            \

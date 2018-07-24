@@ -1,7 +1,8 @@
 FROM       fedora:27
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "nss"
 
 RUN dnf upgrade -y                                          && \
     dnf groupinstall -y "Development Tools"                 && \
@@ -58,6 +59,7 @@ RUN dnf upgrade -y                                          && \
                                     github3.py                 \
                                     google-auth                \
                                     influxdb                   \
+                                    jmespath                   \
                                     kazoo                      \
                                     linode-python              \
                                     lxml                       \

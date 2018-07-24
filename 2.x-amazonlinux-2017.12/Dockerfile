@@ -55,6 +55,7 @@ RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
                                     github3.py                        \
                                     google-auth                       \
                                     influxdb                          \
+                                    jmespath                          \
                                     kazoo                             \
                                     linode-python                     \
                                     lxml                              \

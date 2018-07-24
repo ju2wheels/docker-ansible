@@ -1,7 +1,8 @@
 FROM       alpine:3.7
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "openssl"
 
 RUN apk upgrade --latest --update-cache                                     && \
     apk add bash                                                               \
@@ -61,6 +62,7 @@ RUN apk upgrade --latest --update-cache                                     && \
                                     github3.py                                 \
                                     google-auth                                \
                                     influxdb                                   \
+                                    jmespath                                   \
                                     kazoo                                      \
                                     libvirt-python                             \
                                     linode-python                              \

@@ -2,11 +2,12 @@ FROM       amazonlinux:2018.03
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
 ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-ENV PYCURL_SSL_LIBRARY "openssl"
+ENV PYCURL_SSL_LIBRARY "nss"
 
 RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
     yum upgrade -y                                                 && \
     yum groupinstall -y "Development Tools"                        && \
+    alternatives --set gcc "/usr/bin/gcc48"                        && \
     yum install -y crontabs                                           \
                    curl                                               \
                    git                                                \
@@ -55,6 +56,7 @@ RUN sed -i 's/releasever=latest/#releasever=latest/' /etc/yum.conf && \
                                     github3.py                        \
                                     google-auth                       \
                                     influxdb                          \
+                                    jmespath                          \
                                     kazoo                             \
                                     linode-python                     \
                                     lxml                              \

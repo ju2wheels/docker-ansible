@@ -1,8 +1,9 @@
 FROM       debian:8
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV DEBIAN_FRONTEND "noninteractive"
-ENV PATH            "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV DEBIAN_FRONTEND    "noninteractive"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "openssl"
 
 RUN apt-get update                                          && \
     apt-get -y dist-upgrade                                 && \
@@ -69,6 +70,7 @@ RUN apt-get update                                          && \
                                     github3.py                 \
                                     google-auth                \
                                     influxdb                   \
+                                    jmespath                   \
                                     kazoo                      \
                                     linode-python              \
                                     lxml                       \

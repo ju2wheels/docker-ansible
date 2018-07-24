@@ -1,7 +1,8 @@
 FROM       alpine:3.3
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "openssl"
 
 RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             && \
     apk add --repository "https://dl-cdn.alpinelinux.org/alpine/v3.5/community"    \
@@ -62,6 +63,7 @@ RUN sed -i 's/http:/https:/g' /etc/apk/repositories                             
                                     github3.py                                     \
                                     google-auth                                    \
                                     influxdb                                       \
+                                    jmespath                                       \
                                     kazoo                                          \
                                     "libvirt-python < 4.1.0"                       \
                                     linode-python                                  \

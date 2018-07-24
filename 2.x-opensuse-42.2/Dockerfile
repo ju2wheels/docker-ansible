@@ -1,7 +1,8 @@
 FROM       opensuse:42.2
 MAINTAINER Julio Lajara <ju2wheels@gmail.com>
 
-ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PATH               "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ENV PYCURL_SSL_LIBRARY "openssl"
 
 RUN zypper --non-interactive update                         && \
     zypper --non-interactive                                   \
@@ -64,6 +65,7 @@ RUN zypper --non-interactive update                         && \
                                     github3.py                 \
                                     google-auth                \
                                     influxdb                   \
+                                    jmespath                   \
                                     kazoo                      \
                                     linode-python              \
                                     lxml                       \
